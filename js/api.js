@@ -1,5 +1,7 @@
 // const urlServer = `http://127.0.0.1:8080`;
-const urlServer = `https://hephucvu-dmo6.onrender.com`;
+// const urlServer = `https://hephucvu-dmo6.onrender.com`;
+const urlServer = 'https://server-js288-shop.onrender.com'; //Server from private repository on github
+
 const urlImage = `https://res.cloudinary.com/do1s1zzdh/image/upload/v1/images`;
 
 const apiCuahang = () => {
