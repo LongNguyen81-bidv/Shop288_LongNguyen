@@ -31,10 +31,17 @@
     </div>
     <div class="container pt-2">
         <div class="row">
-            <div class="col-12 text-right">
+            <div class="col-6 text-left">
                 <h5 class="text-info">
                     Chào:
                     <script>document.write(`${user.Ho_ten} - ${user.Nhom.Ten}`)</script>
+                </h5>
+            </div>
+            <div class="col-6 text-right">
+                <h5 class="text-info">
+                    <a href="./report/">
+                        <button class="btn btn-primary">Báo cáo bán hàng</button>
+                    </a>
                     <small><a href="javaScript:void(0)" class="text-danger"
                             onclick="sessionStorage.removeItem('USER'); window.location=`.`">Thoát Đăng
                             nhập</a></small>
