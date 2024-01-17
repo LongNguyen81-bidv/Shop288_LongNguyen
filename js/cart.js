@@ -177,6 +177,10 @@ const datHang = () => {
         "Email": document.querySelector("#Th_Email").value,
         "Dia_chi": document.querySelector("#Th_Dia_chi").value
     }
+    if (Khach_hang.Ho_ten == "" || Khach_hang.Dien_thoai == "" || Khach_hang.Email == "" || Khach_hang.Dia_chi == "") {
+        alert("Vui lòng nhập đầy đủ thông tin")
+        return;
+    }
     carts.forEach(item => {
         let donDathang = {
             "Ngay_Dat_hang": new Date().toLocaleDateString(),
@@ -187,6 +191,10 @@ const datHang = () => {
             "Trang_thai": "CHUA_GIAO_HANG",
             "Khach_hang": Khach_hang
         };
+        if (donDathang.Ngay_Giao_hang == "") {
+            alert("Vui lòng chọn ngày giao hàng")
+            return;
+        }
         let maso = item.maso;
         let donhang = {
             nhom: item.nhom,
@@ -206,4 +214,6 @@ const datHang = () => {
         console.log(err);
     })
 }
+
+
 
