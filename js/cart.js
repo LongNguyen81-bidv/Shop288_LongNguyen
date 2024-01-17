@@ -181,6 +181,11 @@ const datHang = () => {
         alert("Vui lòng nhập đầy đủ thông tin")
         return;
     }
+    // Kiểm tra thông tin email đúng cú pháp
+    if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(Khach_hang.Email)) {
+        alert("Email không đúng định dạng")
+        return;
+    }
     carts.forEach(item => {
         let donDathang = {
             "Ngay_Dat_hang": new Date().toLocaleDateString(),
