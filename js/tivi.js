@@ -98,7 +98,11 @@ const taoNhom = () => {
         "Ma_so": "ALL",
         "Ten": "ALL"
     })
-
+    // loại bỏ những nhóm trùng nhau trong dsNhom
+    dsNhom = dsNhom.filter((nhom, index) => {
+        return dsNhom.findIndex(x => x.Ten == nhom.Ten) == index
+    })
+    return dsNhom;
 }
 
 const xuatNhom = (dsNhom = [], Tag) => {
